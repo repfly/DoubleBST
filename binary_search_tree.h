@@ -9,7 +9,7 @@ using namespace std;
 
 class binary_search_tree {
 private:
-    double * tree;
+    static double * tree;
 public:
 
     binary_search_tree();

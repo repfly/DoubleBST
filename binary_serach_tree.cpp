@@ -100,4 +100,4 @@ void binary_search_tree::preOrder(int currentIndex) {
         cout << tree[currentIndex] << " " << endl;
         preOrder(2 * currentIndex + 2);
     }
-}}
+}
