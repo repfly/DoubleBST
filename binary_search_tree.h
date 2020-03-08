@@ -15,9 +15,9 @@ public:
     binary_search_tree();
 
     int size;
-    void insertElement(double x);
-    void searchElement(double x);
-    void inOrder(int currentIndex);
+    static void insertElement(double x);
+    static void searchElement(double x);
+    static void inOrder(int currentIndex);
     void preOrder(int currentIndex);
     void postOrder(int currentIndex);
     void parent(double x);
