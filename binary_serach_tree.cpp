@@ -3,14 +3,14 @@
 //
 #include "binary_search_tree.h"
 #include <iostream>
-#include "stdio.h"
 
 binary_search_tree::binary_search_tree() {
     this -> size = extendSize(size);
-    //cout << this -> size << endl;
-    this -> tree = new double[this -> size];
+    cout << this -> size << endl;
+    binary_search_tree::tree = new double[this -> size];
+
     for(int x = 0; x < this -> size; x++){
-        tree[x] = NULL;
+        tree[x] = 0.0;
     }
 }
 
@@ -32,14 +32,14 @@ void binary_search_tree::insertElement(double x) {
             break;
         }else if(tree[currentIndex] <= x) {
             if(tree[currentIndex] == x){
-                cout << "ERROR!-- Repeating element" << endl;
+                cout << "Element already exists. Try another one." << endl;
                 break;
             }else
                 cout << " Right ";
             currentIndex = (2 * currentIndex + 2);
         }else if(tree[currentIndex] >= x) {
             if(tree[currentIndex] == x){
-                cout << "ERROR!-- Repeating element" << endl;
+                cout << "Element already exists. Try another one." << endl;
                 break;
             }else
                 cout << " Left ";
@@ -51,7 +51,7 @@ void binary_search_tree::insertElement(double x) {
 void binary_search_tree::searchElement(double x) {
     int currentIndex = 0;
     while (true) {
-        if (tree[currentIndex] == NULL) {
+        if (tree[currentIndex] == 0.0) {
             cout << "Not Found" << endl;
             break;
         }
@@ -76,7 +76,7 @@ void binary_search_tree::parent(double x) {
 }
 
 void binary_search_tree::inOrder(int currentIndex) {
-    if(tree[currentIndex] != NULL) {
+    if(tree[currentIndex] != 0.0) {
         inOrder(2 * currentIndex + 1);
         parent(currentIndex);
         cout << tree[currentIndex] << endl;
@@ -85,7 +85,7 @@ void binary_search_tree::inOrder(int currentIndex) {
 }
 
 void binary_search_tree::postOrder(int currentIndex) {
-    if(tree[currentIndex] != NULL){
+    if(tree[currentIndex] != 0.0){
         postOrder(2 * currentIndex + 1);
         postOrder(2 * currentIndex + 2);
         parent(currentIndex);
@@ -94,7 +94,7 @@ void binary_search_tree::postOrder(int currentIndex) {
 }
 
 void binary_search_tree::preOrder(int currentIndex) {
-    if(tree[currentIndex] != NULL) {
+    if(tree[currentIndex] != 0.0) {
         preOrder(2 * currentIndex + 1);
         parent(currentIndex);
         cout << tree[currentIndex] << " " << endl;

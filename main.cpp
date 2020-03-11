@@ -34,7 +34,27 @@ int main() {
         case 3:
             binary_search_tree::inOrder(0);
             break;
-
+        case 4:
+            binary_search_tree::preOrder(0);
+            break;
+        case 5:
+            binary_search_tree::postOrder(0);
+            break;
+        case 6:
+            double showtheparent;
+            cout << "Enter the value to show it's parent: ";
+            cin >> showtheparent;
+            binary_search_tree::parent(showtheparent);
+            break;
+        case 7:
+            double extendVal;
+            cout << "Enter the value to extend by: ";
+            cin >> extendVal;
+            binary_search_tree::extendSize(extendVal);
+            break;
+        case 8:
+            cout << "Exiting from the program...";
+            return  0;
     }
     return 0;
 }

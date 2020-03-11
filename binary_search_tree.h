@@ -11,18 +11,16 @@ class binary_search_tree {
 private:
     static double * tree;
 public:
-
     binary_search_tree();
 
     int size;
     static void insertElement(double x);
     static void searchElement(double x);
     static void inOrder(int currentIndex);
-    void preOrder(int currentIndex);
-    void postOrder(int currentIndex);
-    void parent(double x);
-    double extendSize(double x);
-
+    static void preOrder(int currentIndex);
+    static void postOrder(int currentIndex);
+    static void parent(double x);
+    static double extendSize(double x);
 
 };
 
