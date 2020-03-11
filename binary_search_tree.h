@@ -22,6 +22,7 @@ public:
     static void parent(double x);
     static double extendSize(double x);
 
+
 };
 
 #endif //DOUBLEBST_BINARY_SEARCH_TREE_H

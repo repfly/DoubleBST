@@ -55,6 +55,7 @@ int main() {
         case 8:
             cout << "Exiting from the program...";
             return  0;
+
     }
     return 0;
 }
